@@ -10,3 +10,5 @@ var_dump($a);
 var_dump($b);
 
 //если в подключаемом файле используется return, то с помощью include возможно включить то, что возвращается.
+
+echo include . __DIR__ . '/test.php';//выведет 'hello world!'
