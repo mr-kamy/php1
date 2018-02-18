@@ -5,17 +5,19 @@ include __DIR__ . '/functions.php';
 $a = $_GET['a'] ?? 0;
 $b = $_GET['b'] ?? 0;
 $op = $_GET['op'];
+$operator = ['+', '-', '*', '/'];
 
 if ((0 == $b) && ($op == '/')) {
     $x = 'Делить на \'0\' нельзя!';
 } elseif ((!is_numeric($a)) || (!is_numeric($b))) {
     $x = 'Введите в поля числа!';
-} elseif (!in_array($op, ['+', '-', '*', '/'])) {
+} elseif (!in_array($op, $operator)) {
     $x = 'Неизвестная операция!';
 } else {
     $x = calc($a, $b, $op);
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,27 +31,16 @@ if ((0 == $b) && ($op == '/')) {
 <form action="/calculator.php">
     <input type="text" name="a" placeholder="<?php echo $a; ?>">
     <select name="op">
-        <option <?php if ($op == '+') {
-            echo 'selected';
-        } ?>>+
-        </option>
-        <option <?php if ($op == '-') {
-            echo 'selected';
-        } ?>>-
-        </option>
-        <option <?php if ($op == '*') {
-            echo 'selected';
-        } ?>>*
-        </option>
-        <option <?php if ($op == '/') {
-            echo 'selected';
-        } ?>>/
-        </option>
+
+        <?php
+        foreach ($operator as $value):?>
+            <option <?php if ($value == $op){ ?>selected<?php } ?>><?php echo $value; ?></option>
+        <?php endforeach; ?>
+
     </select>
     <input type="text" name="b" placeholder="<?php echo $b; ?>">
     <input type="hidden">
     <input type="submit" value="=">
-
 </form>
 
 <?php echo $x; ?>
