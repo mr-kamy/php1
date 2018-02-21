@@ -39,7 +39,6 @@ if ((0 == $b) && ($op == '/')) {
 
     </select>
     <input type="text" name="b" placeholder="<?php echo $b; ?>">
-    <input type="hidden">
     <button type="submit">=</button>
 </form>
 
