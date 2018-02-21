@@ -40,7 +40,7 @@ if ((0 == $b) && ($op == '/')) {
     </select>
     <input type="text" name="b" placeholder="<?php echo $b; ?>">
     <input type="hidden">
-    <input type="submit" value="=">
+    <button type="submit">=</button>
 </form>
 
 <?php echo $x; ?>
