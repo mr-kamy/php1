@@ -29,7 +29,7 @@ foreach ($images as $image) :?>
     <a href="/image.php?id=<?php echo $image; ?>"><img src="/img/<?php echo $image; ?>" width="300"></a>
 <?php endforeach; ?>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="/upload.php" method="post" enctype="multipart/form-data">
     <input type="file" name="myimg">
     <button type="submit">Отправить</button>
 </form>
