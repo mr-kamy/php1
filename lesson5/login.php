@@ -1,7 +1,7 @@
 <?php
 session_start();
 include __DIR__ . '/functions.php';
-if (isset($_SESSION['name'])) {
+if (null != getCurrentUser()) {
     $name = $_SESSION['name'];
     if (existsUser($name)) {
         header('Location: /');
