@@ -11,6 +11,7 @@ class Logger extends TextFile
         $date = date('c');
         $textLog = $name . ': ' . $date . '- ' . $title . "\n";
         $this->data[] = $textLog;
+        return $this;
     }
 
 }
