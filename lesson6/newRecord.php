@@ -6,8 +6,7 @@ $guestBook = new GuestBook($path);
 
 if (isset($_POST['text'])) {
     $text = $_POST['text'];
-    $guestBook->append($text);
-    $guestBook->save();
+    $guestBook->append($text)->save();
 }
 
 header('Location: /guestBook.php');
