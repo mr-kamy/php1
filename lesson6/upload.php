@@ -10,8 +10,7 @@ $log = __DIR__ . '/data/log.txt';
 $logger = new Logger($log);
 
 if ($upload->isUploaded()) {
-    $logger->append($name);
-    $logger->save();
+    $logger->append($name)->save();
     $upload->upload();
 }
 
