@@ -1,10 +1,7 @@
 <?php
 session_start();
 require_once __DIR__ . '/classes/GuestBook.php';
-require_once __DIR__ . '/functions.php';
 
-if (null != getCurrentUser()) {
-    $name = getCurrentUser();
 }
 
 $path = __DIR__ . '/data/guestbook.txt';
