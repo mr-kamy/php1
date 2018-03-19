@@ -19,5 +19,14 @@ class News
     {
         return $this->data;
     }
+    
+    public function getById($id)
+    {
+        if (isset($this->data[$id-1])){
+            return $this->data[$id-1];
+        } else {
+            return false;
+        }
+    }
 
 }
