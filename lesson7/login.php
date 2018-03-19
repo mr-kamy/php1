@@ -4,6 +4,7 @@ require_once __DIR__ . '/functions.php';
 
 if (null != getCurrentUser()) {
     header('Location: /gallery.php');
+    exit;
 } else { ?>
     <!doctype html>
     <html lang="en">
