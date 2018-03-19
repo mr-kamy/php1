@@ -12,7 +12,7 @@
 <a href="/">Гостевая книга</a>
 <a href="/news.php">Новости</a>
 
-<?php if (null != $user): ?>
+<?php if ((isset($user)) &&(null != $user)): ?>
     <p>Привет, <?php echo $user; ?>!</p>
     <a href="/logout.php">Выйти</a>
     <form action="/appendImg.php" method="post" enctype="multipart/form-data">
@@ -26,11 +26,6 @@
 <?php foreach ($gallery->getFiles() as $file): ?>
     <a href="/image.php?id=<?php echo $file->getFile(); ?>"><img src="/img/<?php echo $file->getFile(); ?>" width="300"></a>
 <?php endforeach; ?>
-
-<form action="/appendImg.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="myimg">
-    <button type="submit">Отправить</button>
-</form>
 
 </body>
 </html>
