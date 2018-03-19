@@ -9,8 +9,10 @@ if (isset($_POST['login']) && isset($_POST['password'])) {
         if (checkPassword($login, $password)) {
             $_SESSION['name'] = $login;
             header('Location: /gallery.php');
+            exit;
         }
     }
 }
 
 header('Location: /login.php');
+exit;
