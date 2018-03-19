@@ -12,4 +12,5 @@ if (isset($_GET['id'])) {
     $view->display($template);
 } else {
     header('Location: /gallery.php');
+    exit;
 }
