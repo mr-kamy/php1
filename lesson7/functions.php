@@ -35,7 +35,7 @@ function checkPassword($login, $password)
 
 function getCurrentUser()
 {
-    if ($_SESSION['name']) {
+    if (isset($_SESSION['name'])) {
         $name = $_SESSION['name'];
         return $name;
     } else {
