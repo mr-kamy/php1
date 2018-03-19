@@ -3,3 +3,4 @@ session_start();
 unset($_SESSION['name']);
 
 header('Location: /gallery.php');
+exit;
