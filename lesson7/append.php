@@ -12,3 +12,4 @@ $record = new GuestBookRecord($message);
 $guestBook->append($record)->save();
 
 header('Location: /');
+exit;
