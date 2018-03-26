@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/App/Db.php';
+require __DIR__ . '/autoload.php';
 
 $db = new \App\Db();
 $sql = 'SELECT * FROM trainSchedule';
