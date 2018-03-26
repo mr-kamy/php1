@@ -2,11 +2,10 @@
 
 require __DIR__ . '/autoload.php';
 
-$db = new \App\Db();
-$sql = 'SELECT * FROM trainSchedule';
-$schedule = $db->query($sql);
+$trainSchedule = new \App\Models\TrainSchedule();
+$schedule = $trainSchedule->getAll();
 
 $view = new \App\View();
 $view->assign('schedule', $schedule);
-$template = __DIR__ . '/templates/index.php';
+$template = __DIR__ . '/templates/trainSchedule.php';
 $view->display($template);
