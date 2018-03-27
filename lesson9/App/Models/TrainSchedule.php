@@ -23,7 +23,6 @@ class TrainSchedule
     {
         //todo write method
 
-
     }
 
 }
