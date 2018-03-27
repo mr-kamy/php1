@@ -22,6 +22,7 @@ class TrainSchedule
     public function getOneRecord($id)
     {
         //todo write method
+
     }
 
 }
