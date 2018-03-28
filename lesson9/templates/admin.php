@@ -51,19 +51,34 @@
             <th>Прибытие</th>
             <th>Отравление</th>
             <th>Назначение</th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
+
         <?php foreach ($schedule as $record): ?>
             <tr>
                 <td><?php echo $record->train; ?></td>
                 <td><?php echo $record->arrival; ?></td>
                 <td><?php echo $record->departure; ?></td>
                 <td><?php echo $record->appointment; ?></td>
+                <td><a href="#">Редактировать</a></td>
             </tr>
         <?php endforeach; ?>
+
         </tbody>
     </table>
+    <a href="#">Добавить новую запись</a>
+    <div class="image">
+        <form>
+            <div class="form-group">
+                <label for="FormControlFile1">Добавить картинку в галерею</label>
+                <input type="file" class="form-control-file" id="FormControlFile1">
+                <input type="">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
