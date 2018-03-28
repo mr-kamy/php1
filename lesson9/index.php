@@ -2,10 +2,6 @@
 
 require __DIR__ . '/autoload.php';
 
-$trainSchedule = new \App\Models\TrainSchedule();
-$schedule = $trainSchedule->getAll();
-
 $view = new \App\View();
-$view->assign('schedule', $schedule);
-$template = __DIR__ . '/templates/trainSchedule.php';
+$template = __DIR__ . '/templates/index.php';
 $view->display($template);
