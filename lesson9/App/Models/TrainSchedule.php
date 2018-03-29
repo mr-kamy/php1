@@ -24,4 +24,18 @@ class TrainSchedule
         //todo write method
     }
 
+    public function append(TrainRecord $record)
+    {
+        $db = new Db();
+        $sql = 'INSERT INTO trainSchedule (train, arrival, departure, appointment) 
+VALUES (:train, :arrival, :departure, :appointment)';
+        $data = [
+            ':train' => $record->train,
+            ':arrival' => $record->arrival,
+            ':departure' => $record->departure,
+            ':appointment' => $record->appointment,
+        ];
+        $db->execute($sql, $data);
+    }
+
 }

@@ -44,42 +44,25 @@
             </div>
         </nav>
     </header>
-    <a href="/lesson9/templates/updateHomeRecord.php">Редактировать запись главной страницы</a>
-    <table class="table table-striped">
-        <thead class="thead-inverse">
-        <tr>
-            <th>Поезд</th>
-            <th>Прибытие</th>
-            <th>Отравление</th>
-            <th>Назначение</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-
-        <?php foreach ($schedule as $record): ?>
-            <tr>
-                <td><?php echo $record->train; ?></td>
-                <td><?php echo $record->arrival; ?></td>
-                <td><?php echo $record->departure; ?></td>
-                <td><?php echo $record->appointment; ?></td>
-                <td><a href="#">Редактировать</a></td>
-            </tr>
-        <?php endforeach; ?>
-
-        </tbody>
-    </table>
-    <a href="/lesson9/templates/appendTrainRecord.php">Добавить новую запись расписания</a>
-    <div class="image">
-        <form action="/lesson9/appendImg.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="FormControlFile1">Добавить картинку в галерею</label>
-                <input type="file" class="form-control-file" id="FormControlFile1" name="myimg">
-                <input type="text" name="descr">
-                <button type="submit" class="btn btn-primary">Отправить</button>
-            </div>
-        </form>
-    </div>
+    <form action="/lesson9/appendTrainRecord.php" method="post">
+        <div class="form-group">
+            <label for="train">Название поезда</label>
+            <input type="text" class="form-control" id="train" required placeholder="Поезд" name="train">
+        </div>
+        <div class="form-group">
+            <label for="arrival">Время прибытия</label>
+            <input type="time" class="form-control" id="arrival" required placeholder="Время прибытия" name="arrival">
+        </div>
+        <div class="form-group">
+            <label for="train">Время отправления</label>
+            <input type="time" class="form-control" id="departure" required placeholder="Время отправления" name="departure">
+        </div>
+        <div class="form-group">
+            <label for="train">Назначение</label>
+            <input type="text" class="form-control" id="appointment" required placeholder="Назначение" name="appointment">
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
 </div>
 </body>
 </html>
