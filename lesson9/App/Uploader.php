@@ -3,6 +3,8 @@
 namespace App;
 
 
+use App\Models\Gallery;
+
 class Uploader
 {
     protected $file;

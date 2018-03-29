@@ -46,9 +46,7 @@
 
             <?php foreach ($images as $image): ?>
                 <div class="col-lg-3 col-md-4 col-6 thumb">
-                    <a href="/lesson9">
                         <img class="img-fluid" src="<?php echo $path . $image->name; ?>" alt="...">
-                    </a>
                 </div>
             <?php endforeach; ?>
 

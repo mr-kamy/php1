@@ -19,4 +19,12 @@ class Gallery
         return $data;
     }
 
+    public function appendImg(string $name,string $descr)
+    {
+        $db = new Db();
+        $sql = 'INSERT INTO gallery (name, description) VALUES (:name, :descr)';
+        $data = [':name' => $name, ':descr' => $descr];
+        $db->execute($sql, $data);
+    }
+
 }

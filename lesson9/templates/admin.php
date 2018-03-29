@@ -71,11 +71,11 @@
     </table>
     <a href="#">Добавить новую запись расписания</a>
     <div class="image">
-        <form>
+        <form action="/lesson9/appendImg.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="FormControlFile1">Добавить картинку в галерею</label>
-                <input type="file" class="form-control-file" id="FormControlFile1">
-                <input type="">
+                <input type="file" class="form-control-file" id="FormControlFile1" name="myimg">
+                <input type="text" name="descr">
                 <button type="submit" class="btn btn-primary">Отправить</button>
             </div>
         </form>
