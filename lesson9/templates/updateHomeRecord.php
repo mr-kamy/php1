@@ -44,42 +44,14 @@
             </div>
         </nav>
     </header>
-    <a href="/lesson9/templates/updateHomeRecord.php">Редактировать запись главной страницы</a>
-    <table class="table table-striped">
-        <thead class="thead-inverse">
-        <tr>
-            <th>Поезд</th>
-            <th>Прибытие</th>
-            <th>Отравление</th>
-            <th>Назначение</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
+    <form action="/lesson9/updateHomeRecord.php" method="post">
+        <div class="form-group">
+            <label for="record">Редактировать запись главной страницы</label>
+            <textarea class="form-control" id="record" rows="5" name="record"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
 
-        <?php foreach ($schedule as $record): ?>
-            <tr>
-                <td><?php echo $record->train; ?></td>
-                <td><?php echo $record->arrival; ?></td>
-                <td><?php echo $record->departure; ?></td>
-                <td><?php echo $record->appointment; ?></td>
-                <td><a href="#">Редактировать</a></td>
-            </tr>
-        <?php endforeach; ?>
-
-        </tbody>
-    </table>
-    <a href="#">Добавить новую запись расписания</a>
-    <div class="image">
-        <form>
-            <div class="form-group">
-                <label for="FormControlFile1">Добавить картинку в галерею</label>
-                <input type="file" class="form-control-file" id="FormControlFile1">
-                <input type="">
-                <button type="submit" class="btn btn-primary">Отправить</button>
-            </div>
-        </form>
-    </div>
 </div>
 </body>
 </html>

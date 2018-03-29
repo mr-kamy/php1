@@ -14,7 +14,7 @@ class HomeRecord
         $this->data = file($this->path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     }
 
-    public function getHomeRecord($path)
+    public function getHomeRecord()
     {
         return $this->data;
     }
