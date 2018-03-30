@@ -21,7 +21,7 @@
 <div class="container">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Орёл</a>
+            <a class="navbar-brand" href="/">Орёл</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,7 +63,8 @@
                 <td><?php echo $record->arrival; ?></td>
                 <td><?php echo $record->departure; ?></td>
                 <td><?php echo $record->appointment; ?></td>
-                <td><a href="/lesson9/templates/updateTrainRecord.php?id=<?php echo $record->id; ?>">Редактировать</a></td>
+                <td><a href="/lesson9/templates/updateTrainRecord.php?id=<?php echo $record->id; ?>">Редактировать</a>
+                </td>
             </tr>
         <?php endforeach; ?>
 

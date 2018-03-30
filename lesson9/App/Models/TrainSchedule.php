@@ -13,7 +13,7 @@ class TrainSchedule
         $db = new Db();
         $sql = 'SELECT * FROM trainSchedule';
         $res = $db->query($sql);
-        foreach ($res as $line){
+        foreach ($res as $line) {
             $data[] = new TrainRecord($line->id, $line->train, $line->arrival, $line->departure, $line->appointment);
         }
         return $data;

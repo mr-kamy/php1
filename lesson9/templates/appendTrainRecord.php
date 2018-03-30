@@ -21,7 +21,7 @@
 <div class="container">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Орёл</a>
+            <a class="navbar-brand" href="/">Орёл</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -55,11 +55,13 @@
         </div>
         <div class="form-group">
             <label for="train">Время отправления</label>
-            <input type="time" class="form-control" id="departure" required placeholder="Время отправления" name="departure">
+            <input type="time" class="form-control" id="departure" required placeholder="Время отправления"
+                   name="departure">
         </div>
         <div class="form-group">
             <label for="train">Назначение</label>
-            <input type="text" class="form-control" id="appointment" required placeholder="Назначение" name="appointment">
+            <input type="text" class="form-control" id="appointment" required placeholder="Назначение"
+                   name="appointment">
         </div>
         <button type="submit" class="btn btn-primary">Отправить</button>
     </form>

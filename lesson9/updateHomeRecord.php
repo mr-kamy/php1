@@ -2,7 +2,7 @@
 
 require __DIR__ . '/autoload.php';
 
-if ((isset($_POST['record'])) && ('' != $_POST['record'])){
+if ((isset($_POST['record'])) && ('' != $_POST['record'])) {
     $path = __DIR__ . '/data/homeRecord.php';
     $homeRecord = new \App\HomeRecord($path);
     $record = $homeRecord->updateHomeRecord($_POST['record']);

@@ -2,15 +2,13 @@
 
 require __DIR__ . '/../autoload.php';
 
-if ((isset($_GET['id'])) && (!empty($_GET['id']))){
+if ((isset($_GET['id'])) && (!empty($_GET['id']))) {
     $id = $_GET['id'];
     $schedule = new \App\Models\TrainSchedule();
     $record = $schedule->getById($_GET['id']);
 } else {
     header('Location: /lesson9/admin.php');
 }
-
-
 
 
 ?>
@@ -37,7 +35,7 @@ if ((isset($_GET['id'])) && (!empty($_GET['id']))){
 <div class="container">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Орёл</a>
+            <a class="navbar-brand" href="/">Орёл</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,7 +61,8 @@ if ((isset($_GET['id'])) && (!empty($_GET['id']))){
     <form action="/lesson9/updateTrainRecord.php" method="post">
         <div class="form-group">
             <label for="train">Название поезда</label>
-            <input type="text" class="form-control" id="train" required placeholder="<?php echo $record->train; ?>" name="train">
+            <input type="text" class="form-control" id="train" required placeholder="<?php echo $record->train; ?>"
+                   name="train">
         </div>
         <div class="form-group">
             <label for="arrival">Время прибытия</label>
@@ -71,11 +70,13 @@ if ((isset($_GET['id'])) && (!empty($_GET['id']))){
         </div>
         <div class="form-group">
             <label for="train">Время отправления</label>
-            <input type="time" class="form-control" id="departure" required placeholder="Время отправления" name="departure">
+            <input type="time" class="form-control" id="departure" required placeholder="Время отправления"
+                   name="departure">
         </div>
         <div class="form-group">
             <label for="train">Назначение</label>
-            <input type="text" class="form-control" id="appointment" required placeholder="<?php echo $record->appointment; ?>" name="appointment">
+            <input type="text" class="form-control" id="appointment" required
+                   placeholder="<?php echo $record->appointment; ?>" name="appointment">
         </div>
         <input type="hidden" name="id" value="<?php echo $id; ?>">
         <button type="submit" class="btn btn-primary">Отправить</button>

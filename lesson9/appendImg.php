@@ -6,7 +6,7 @@ $upload = new \App\Uploader('myimg', $pathImg);
 $name = $upload->getName();
 $file = $_FILES['myimg'];
 
-if(isset($_POST['descr'])){
+if (isset($_POST['descr'])) {
     $descr = $_POST['descr'];
 } else {
     $descr = '';
