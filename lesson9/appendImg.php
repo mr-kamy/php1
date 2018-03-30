@@ -20,4 +20,4 @@ if ($upload->isUploaded()) {
     }
 }
 
-header('Location: /lesson9/admin.php');
+header('Location: /admin.php');

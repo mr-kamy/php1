@@ -32,13 +32,13 @@
                         <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/gallery.php">Фотогалерея</a>
+                        <a class="nav-link" href="/gallery.php">Фотогалерея</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/trainSchedule.php">Расписание поездов</a>
+                        <a class="nav-link" href="/trainSchedule.php">Расписание поездов</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/admin.php">Админ панель</a>
+                        <a class="nav-link" href="/admin.php">Админ панель</a>
                     </li>
                 </ul>
             </div>

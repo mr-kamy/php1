@@ -29,22 +29,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9">Главная</a>
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/gallery.php">Фотогалерея</a>
+                        <a class="nav-link" href="/gallery.php">Фотогалерея</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/trainSchedule.php">Расписание поездов</a>
+                        <a class="nav-link" href="/trainSchedule.php">Расписание поездов</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lesson9/admin.php">Админ панель<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/admin.php">Админ панель<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <form action="/lesson9/updateHomeRecord.php" method="post">
+    <form action="/updateHomeRecord.php" method="post">
         <div class="form-group">
             <label for="record">Редактировать запись главной страницы</label>
             <textarea class="form-control" id="record" rows="5" name="record"></textarea>

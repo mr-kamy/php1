@@ -8,6 +8,6 @@ $images = $gallery->getImages();
 $view = new \App\View();
 $template = __DIR__ . '/templates/gallery.php';
 $view->assign('images', $images);
-$path = '/lesson9/data/img/';
+$path = '/data/img/';
 $view->assign('path', $path);
 $view->display($template);

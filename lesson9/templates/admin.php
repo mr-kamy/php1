@@ -29,22 +29,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9">Главная</a>
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/gallery.php">Фотогалерея</a>
+                        <a class="nav-link" href="/gallery.php">Фотогалерея</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/trainSchedule.php">Расписание поездов</a>
+                        <a class="nav-link" href="/trainSchedule.php">Расписание поездов</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lesson9/admin.php">Админ панель<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/admin.php">Админ панель<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <a href="/lesson9/templates/updateHomeRecord.php">Редактировать запись главной страницы</a>
+    <a href="/templates/updateHomeRecord.php">Редактировать запись главной страницы</a>
     <table class="table table-striped">
         <thead class="thead-inverse">
         <tr>
@@ -63,16 +63,16 @@
                 <td><?php echo $record->arrival; ?></td>
                 <td><?php echo $record->departure; ?></td>
                 <td><?php echo $record->appointment; ?></td>
-                <td><a href="/lesson9/templates/updateTrainRecord.php?id=<?php echo $record->id; ?>">Редактировать</a>
+                <td><a href="/templates/updateTrainRecord.php?id=<?php echo $record->id; ?>">Редактировать</a>
                 </td>
             </tr>
         <?php endforeach; ?>
 
         </tbody>
     </table>
-    <a href="/lesson9/templates/appendTrainRecord.php">Добавить новую запись расписания</a>
+    <a href="/templates/appendTrainRecord.php">Добавить новую запись расписания</a>
     <div class="image">
-        <form action="/lesson9/appendImg.php" method="post" enctype="multipart/form-data">
+        <form action="/appendImg.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="FormControlFile1">Добавить картинку в галерею</label>
                 <input type="file" class="form-control-file" id="FormControlFile1" name="myimg">

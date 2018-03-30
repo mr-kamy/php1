@@ -8,6 +8,6 @@ if ((isset($_POST)) && (!empty($_POST))) {
     $schedule->append($trainRecord);
 }
 
-header('Location: /lesson9/admin.php');
+header('Location: /admin.php');
 
 

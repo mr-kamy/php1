@@ -8,4 +8,4 @@ if ((isset($_POST)) && (!empty($_POST))) {
     $schedule->update($record);
 }
 
-header('Location: /lesson9/admin.php');
+header('Location: /admin.php');

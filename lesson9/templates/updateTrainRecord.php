@@ -43,22 +43,22 @@ if ((isset($_GET['id'])) && (!empty($_GET['id']))) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9">Главная</a>
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/gallery.php">Фотогалерея</a>
+                        <a class="nav-link" href="/gallery.php">Фотогалерея</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/lesson9/trainSchedule.php">Расписание поездов</a>
+                        <a class="nav-link" href="/trainSchedule.php">Расписание поездов</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/lesson9/admin.php">Админ панель<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/admin.php">Админ панель<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <form action="/lesson9/updateTrainRecord.php" method="post">
+    <form action="/updateTrainRecord.php" method="post">
         <div class="form-group">
             <label for="train">Название поезда</label>
             <input type="text" class="form-control" id="train" required placeholder="<?php echo $record->train; ?>"
