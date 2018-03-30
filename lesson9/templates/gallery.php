@@ -16,7 +16,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
 
-    <title>Hello, world!</title>
+    <title>Галерея</title>
 </head>
 <body>
 <div class="container">
